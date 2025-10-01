@@ -1,0 +1,20 @@
+// Menu mobile
+document.getElementById('nav-toggle').addEventListener('click', function(){
+  const nav = document.getElementById('site-nav');
+  if(nav.style.display === 'flex'){ nav.style.display = 'none'; }
+  else { nav.style.display = 'flex'; nav.style.flexDirection = 'column'; }
+});
+
+// Footer year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Simple form validation (prevent blank sends)
+document.getElementById('contact-form').addEventListener('submit', function(e){
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const msg = document.getElementById('message').value.trim();
+  if(!name || !email || !msg){
+    e.preventDefault();
+    alert('Merci de remplir tous les champs avant d\'envoyer.');
+  }
+});

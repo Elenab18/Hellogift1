@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mon Super Site</title>
+  <meta name="description" content="Une page d'accueil moderne pour présenter votre activité." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/favicon.ico" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">MonLogo</a>
+      <button id="nav-toggle" aria-label="Ouvrir le menu">☰</button>
+      <nav id="site-nav" class="site-nav">
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">À propos</a>
+        <a href="#contact" class="btn-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Votre projet, notre savoir-faire</h1>
+          <p>Nous créons des sites rapides, beaux et qui convertissent. Simple, efficace et sur-mesure.</p>
+          <p class="cta">
+            <a href="#contact" class="btn">Demander un devis</a>
+            <a href="#portfolio" class="btn ghost">Voir le portfolio</a>
+          </p>
+        </div>
+        <div class="hero-media">
+          <img src="assets/hero-illustration.svg" alt="Illustration" />
+        </div>
+      </div>
+    </section>
+
+    <section class="features container" id="services">
+      <h2>Ce que nous faisons</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Sites vitrines</h3>
+          <p>Présentez votre activité avec élégance et performance.</p>
+        </article>
+        <article class="card">
+          <h3>E-commerce</h3>
+          <p>Boutiques rapides, conversion optimisée et gestion simple.</p>
+        </article>
+        <article class="card">
+          <h3>Web apps</h3>
+          <p>Applications interactives et scalables adaptées à votre besoin.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="portfolio container" id="portfolio">
+      <h2>Quelques projets</h2>
+      <div class="grid-3">
+        <figure><img src="assets/portfolio1.jpg" alt="Projet 1"><figcaption>Projet 1 — Site vitrine</figcaption></figure>
+        <figure><img src="assets/portfolio2.jpg" alt="Projet 2"><figcaption>Projet 2 — Boutique</figcaption></figure>
+        <figure><img src="assets/portfolio3.jpg" alt="Projet 3"><figcaption>Projet 3 — Web app</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="about container" id="about">
+      <h2>À propos</h2>
+      <p>Nous sommes une petite équipe passionnée par la simplicité et la performance web. Nous privilégions des solutions maintenables et accessibles.</p>
+    </section>
+
+    <section class="contact container" id="contact">
+      <h2>Contact</h2>
+      <form id="contact-form" action="mailto:ton-email@example.com" method="post" enctype="text/plain">
+        <label>
+          Nom
+          <input type="text" name="name" id="name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" id="email" required />
+        </label>
+        <label>
+          Message
+          <textarea name="message" id="message" rows="5" required></textarea>
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn">Envoyer</button>
+          <button type="reset" class="btn ghost">Effacer</button>
+        </div>
+        <p class="note">Astuce : pour un vrai formulaire fonctionnel sans backend, remplace l'attribut <code>action</code> par l'URL de Formspree ou Netlify Forms.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Mon entreprise — Tous droits réservés</p>
+      <nav>
+        <a href="#privacy">Politique de confidentialité</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
